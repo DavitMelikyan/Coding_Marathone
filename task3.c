@@ -21,19 +21,11 @@ void arrinp(int *arr, const int size) {
 }
 
 void srch(int *arr, const int size, int target) {
-	int left = 0;
-	int right = size - 1;
-	int middle = (left + right) / 2;
-	while(left < right) {
-		middle = (left + right) / 2;
-		if (arr[middle] < target) {	
-			left = middle;
-		} else if(arr[middle] > target) {
-			right = middle;
-		} else {
-			printf("YES \n");
+	for (int i = 0; i < size; ++i) {
+		if (arr[i] == target) {
+			printf("YES");
 			return;
 		}
 	}
-	printf("NO \n");
+	printf("NO");
 }
